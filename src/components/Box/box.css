@@ -1,0 +1,10 @@
+.box {
+  background-color: #F5F6F9;
+  border: 2px dashed #40E9C3;
+  border-radius: 10%;
+  display: inline-flex;
+  vertical-align: bottom;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
