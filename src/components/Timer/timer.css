@@ -1,0 +1,11 @@
+.timer {
+  color: #3B0078;
+  font-size: 16px;
+}
+
+.timer::before {
+  content: url('./clock_icon-icons.svg');
+  margin: 0 5px 0 0;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
