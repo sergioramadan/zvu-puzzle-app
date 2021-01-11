@@ -7,7 +7,7 @@ describe('<Letter>', () => {
     render(<Letter />);
   });
 
-  test('renders card element', () => {
+  test('renders letter element', () => {
     const { container } = render(<Letter />);
     expect(container.firstChild).toHaveClass('letter')
   });

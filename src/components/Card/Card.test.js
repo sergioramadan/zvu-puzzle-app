@@ -11,4 +11,5 @@ describe('<Card>', () => {
     const { container } = render(<Card />);
     expect(container.firstChild).toHaveClass('card')
   });
+
 });
