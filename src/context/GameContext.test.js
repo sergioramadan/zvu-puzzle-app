@@ -35,15 +35,14 @@ describe("<GameContext />", () => {
     expect(getByText("Name: 'Arthur'")).toBeTruthy();
   });
 
-  test("User Name can be changed", () => {
-    const name = "Arthur";
+  test("Game can be started", () => {
     const { getByText } = render(
       <GameProvider>
         <GameContext.Consumer>
-          { ({ gameState, setPlayerName }) => (
+          { ({ gameState, setGameStart }) => (
               <>
-                <span>Name: '{gameState.name.toString()}'</span>
-                <button onClick={() => setPlayerName(name)}>Change Name</button>
+                <span>Game started: '{gameState.running.toString()}'</span>
+                <button onClick={() => setGameStart()}>Start game</button>
               </>
             ) 
           }
@@ -51,8 +50,9 @@ describe("<GameContext />", () => {
       </GameProvider>
     );
 
-    fireEvent.click(getByText("Change Name"))
-    expect(getByText("Name: 'Arthur'")).toBeTruthy();
+    expect(getByText("Game started: 'false'")).toBeTruthy();
+    fireEvent.click(getByText("Start game"));
+    expect(getByText("Game started: 'true'")).toBeTruthy();
   });
 
 });
