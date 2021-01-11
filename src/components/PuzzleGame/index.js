@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { GameContext } from '../context/GameContext';
-import Box from './Box';
-import Card from './Card';
-import Letter from './Letter';
-import Timer from './Timer';
+import { GameContext } from '../../context/GameContext';
+import Box from '../Box';
+import Card from '../Card';
+import Letter from '../Letter';
+import Timer from '../Timer';
 
 function PuzzleGame() {
   const { gameState } = useContext(GameContext);

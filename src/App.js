@@ -1,12 +1,18 @@
-import React from 'react';
-import { GameProvider } from './context/GameContext';
-import MainContainer from './components/MainContainer';
+import React, { useContext } from 'react';
+import UserRegistration from './components/UserRegistration';
+import PuzzleGame from './components/PuzzleGame';
+import { GameContext } from './context/GameContext';
 
 function App() {
+  const { gameState } = useContext(GameContext);  
+
   return (
-    <GameProvider>
-      <MainContainer />
-    </GameProvider>
+    <div className="main-container">
+      { !gameState.name ?
+        <UserRegistration /> :
+        <PuzzleGame />
+      }
+    </div>
   );
 }
 

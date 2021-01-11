@@ -7,10 +7,11 @@ import './letter.css';
 
 function Letter({ letter }) {
   const letters = { O, U, V, Z };
+  const letterImage = !!letter ? letters[letter.toUpperCase()] : '';
 
   return (
     <img className="letter"
-      src={letters[letter.toUpperCase()]}
+      src={letterImage}
       alt={letter}
     />
   );
